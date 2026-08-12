@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استوديو الأنيميشن</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        /* القائمة العلوية */
+        header {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 10px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        .menu a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        /* القسم الرئيسي */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* قسم الأعمال */
+        .works {
+            padding: 50px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .work-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .work-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        .work-info {
+            padding: 20px;
+        }
+        
+        .work-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .work-desc {
+            opacity: 0.8;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        /* الفوتر */
+        footer {
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        /* الأنيميشن */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* للشاشات الصغيرة */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .logo {
+                font-size: 18px;
+            }
+            
+            .menu {
+                justify-content: center;
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <header>
+        <nav>
+            <a href="#" class="logo">🎬 استوديو الأنيميشن</a>
+            <ul class="menu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#works">أعمالنا</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="contact.html">تواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero" id="home">
+        <h1>🌟 نصنع الأحلام حقيقة</h1>
+        <p class="subtitle">استوديو متخصص في صناعة الأنيميشن والرسوم المتحركة</p>
+        <div class="buttons">
+            <a href="#works" class="btn">شاهد أعمالنا</a>
+            <a href="shop.html" class="btn">تسوق الآن</a>
+        </div>
+    </section>
+
+    <!-- قسم الأعمال -->
+    <section class="works" id="works">
+        <h2 class="section-title">أحدث أعمالنا</h2>
+        <div class="works-grid">
+            <!-- عمل 1 -->
+            <div class="work-card">
+                <div class="work-image">🎭</div>
+                <div class="work-info">
+                    <h3 class="work-title">مسلسل المغامرة</h3>
+                    <p class="work-desc">قصة ملحمية مليئة بالإثارة والتشويق في عالم خيالي رائع</p>
+                </div>
+            </div>
+            
+            <!-- عمل 2 -->
+            <div class="work-card">
+                <div class="work-image">⚔️</div>
+                <div class="work-info">
+                    <h3 class="work-title">أساطير المحاربين</h3>
+                    <p class="work-desc">معارك ملحمية وشخصيات لا تُنسى في رحلة بطولية</p>
+                </div>
+            </div>
+            
+            <!-- عمل 3 -->
+            <div class="work-card">
+                <div class="work-image">🌸</div>
+                <div class="work-info">
+                    <h3 class="work-title">حكايات الربيع</h3>
+                    <p class="work-desc">قصة رومانسية جميلة تلامس القلوب والمشاعر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2026 استوديو الأنيميشن. جميع الحقوق محفوظة</p>
+        <p style="margin-top: 10px;">تابعنا على: Instagram | Twitter | YouTube</p>
+    </footer>
+</body>
+  </html>
