@@ -3,264 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ICE STUDIO </title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-Cairo: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-        }
-        
-        /* القائمة العلوية */
-        header {
-            background: rgba(0,0,0,0.3);
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            backdrop-filter: blur(10px);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 0 10px;
-        }
-        
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .menu {
-            display: flex;
-            gap: 15px;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-        
-        .menu a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        
-        .menu a:hover {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        /* القسم الرئيسي */
-        .hero {
-            text-align: center;
-            padding: 80px 20px 50px;
-        }
-        
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            animation: fadeIn 1s;
-        }
-        
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            background: white;
-            color: #667eea;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        
-        /* قسم الأعمال */
-        .works {
-            padding: 50px 20px;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-        
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .work-card {
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-        
-        .work-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-        
-        .work-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-        }
-        
-        .work-info {
-            padding: 20px;
-        }
-        
-        .work-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .work-desc {
-            opacity: 0.8;
-            line-height: 1.6;
-            font-size: 14px;
-        }
-        
-        /* الفوتر */
-        footer {
-            background: rgba(0,0,0,0.3);
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
-        
-        /* الأنيميشن */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* للشاشات الصغيرة */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 28px;
-            }
-            
-            .subtitle {
-                font-size: 16px;
-            }
-            
-            .logo {
-                font-size: 18px;
-            }
-            
-            .menu {
-                justify-content: center;
-                width: 100%;
-                margin-top: 10px;
-            }
-        }
-    </style>
+    <title>استوديو الأنمي - إبداع عربي أصيل</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- القائمة العلوية -->
-    <header>
-        <nav>
-            <a href="#" class="logo"> ICE STUDIO </a>
-            <ul class="menu">
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>استوديو الأنمي</h1>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#works">أعمالنا</a></li>
-                <li><a href="shop.html">المتجر</a></li>
-                <li><a href="contact.html">تواصل</a></li>
+                <li><a href="#anime">أعمالنا</a></li>
+                <li><a href="#episodes">الحلقات</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
 
-    <!-- القسم الرئيسي -->
-    <section class="hero" id="home">
-        <h1>🌟 نصنع الأحلام حقيقة</h1>
-        <p class="subtitle">استوديو متخصص في صناعة الأنيميشن والرسوم المتحركة</p>
-        <div class="buttons">
-            <a href="#works" class="btn">شاهد أعمالنا</a>
-            <a href="shop.html" class="btn">تسوق الآن</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">نصنع الأحلام بالفن العربي</h1>
+            <p class="hero-subtitle">استوديو عربي متخصص في إنتاج الأنمي الأصيل</p>
+            <a href="#anime" class="cta-button">اكتشف أعمالنا</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Anime Section -->
+    <section id="anime" class="anime-section">
+        <div class="container">
+            <h2 class="section-title">أعمالنا الفنية</h2>
+            <div class="anime-grid">
+                <!-- Anime Card 1 -->
+                <div class="anime-card">
+                    <div class="anime-image">
+                        <img src="images/anime1.jpg" alt="أنمي 1">
+                        <div class="anime-overlay">
+                            <button class="watch-btn">شاهد الآن</button>
+                        </div>
+                    </div>
+                    <div class="anime-info">
+                        <h3>اسم الأنمي الأول</h3>
+                        <p>وصف مختصر عن القصة والأحداث</p>
+                        <div class="anime-meta">
+                            <span>12 حلقة</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anime Card 2 -->
+                <div class="anime-card">
+                    <div class="anime-image">
+                        <img src="images/anime2.jpg" alt="أنمي 2">
+                        <div class="anime-overlay">
+                            <button class="watch-btn">شاهد الآن</button>
+                        </div>
+                    </div>
+                    <div class="anime-info">
+                        <h3>اسم الأنمي الثاني</h3>
+                        <p>وصف مختصر عن القصة والأحداث</p>
+                        <div class="anime-meta">
+                            <span>24 حلقة</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أضف المزيد حسب الحاجة -->
+            </div>
         </div>
     </section>
 
-    <!-- قسم الأعمال -->
-    <section class="works" id="works">
-        <h2 class="section-title">أحدث أعمالنا</h2>
-        <div class="works-grid">
-            <!-- عمل 1 -->
-            <div class="work-card">
-                <div class="work-image">🎭</div>
-                <div class="work-info">
-                    <h3 class="work-title">مسلسل المغامرة</h3>
-                    <p class="work-desc">قصة ملحمية مليئة بالإثارة والتشويق في عالم خيالي رائع</p>
+    <!-- Episodes Section -->
+    <section id="episodes" class="episodes-section">
+        <div class="container">
+            <h2 class="section-title">أحدث الحلقات</h2>
+            <div class="episodes-grid">
+                <div class="episode-card">
+                    <div class="episode-thumbnail">
+                        <img src="images/ep1.jpg" alt="الحلقة 1">
+                        <span class="episode-number">01</span>
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="episode-info">
+                        <h4>اسم الحلقة الأولى</h4>
+                        <p>اسم المسلسل - الموسم الأول</p>
+                        <span class="episode-date">منذ يومين</span>
+                    </div>
                 </div>
+
+                <!-- أضف المزيد من الحلقات -->
             </div>
-            
-            <!-- عمل 2 -->
-            <div class="work-card">
-                <div class="work-image">⚔️</div>
-                <div class="work-info">
-                    <h3 class="work-title">أساطير المحاربين</h3>
-                    <p class="work-desc">معارك ملحمية وشخصيات لا تُنسى في رحلة بطولية</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">المنتجات التذكارية</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product1.jpg" alt="منتج 1">
+                        <span class="product-badge">جديد</span>
+                    </div>
+                    <div class="product-info">
+                        <h4>اسم المنتج</h4>
+                        <p class="product-price">250 جنيه</p>
+                        <button class="add-to-cart">أضف للسلة</button>
+                    </div>
                 </div>
+
+                <!-- أضف المزيد من المنتجات -->
             </div>
-            
-            <!-- عمل 3 -->
-            <div class="work-card">
-                <div class="work-image">🌸</div>
-                <div class="work-info">
-                    <h3 class="work-title">حكايات الربيع</h3>
-                    <p class="work-desc">قصة رومانسية جميلة تلامس القلوب والمشاعر</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">من نحن</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>استوديو عربي بروح عالمية</h3>
+                    <p>نحن استوديو متخصص في إنتاج أعمال الأنمي بلمسة عربية أصيلة. نؤمن بقوة القصص العربية وقدرتها على الوصول للعالمية من خلال فن الأنمي.</p>
+                    <p>مستوحين من الاستوديوهات العالمية مثل MAPPA، نسعى لتقديم محتوى عربي بجودة عالمية.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>حلقة منتجة</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5</h3>
+                        <p>مسلسلات</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100K+</h3>
+                        <p>متابع</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- الفوتر -->
-    <footer>
-        <p>&copy; 2026 استوديو الأنيميشن. جميع الحقوق محفوظة</p>
-        <p style="margin-top: 10px;">تابعنا على: Instagram | Twitter | YouTube</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="الاسم" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <textarea placeholder="رسالتك" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>استوديو الأنمي</h4>
+                    <p>نصنع الأحلام بالفن العربي</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#anime">أعمالنا</a></li>
+                        <li><a href="#episodes">الحلقات</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#">فيسبوك</a>
+                        <a href="#">تويتر</a>
+                        <a href="#">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 استوديو الأنمي - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-  </html>
+</html>
